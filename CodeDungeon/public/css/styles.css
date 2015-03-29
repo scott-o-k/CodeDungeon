@@ -293,7 +293,7 @@ div.form-group:nth-of-type(even), div button {
 /*----END REGISTER----*/
 
 
-/*----CHECKLIST PAGE----*/
+/*----CHECKLIST PAGE ----*/
 
 h3 {
 	font-size: 1.5em;
@@ -308,6 +308,7 @@ h3 {
 	padding: 30px 0;
 }
 
+
 .step-container:nth-of-type(even) {
 	background-color: #1c2b39;
 }
@@ -316,7 +317,7 @@ h3 {
 	padding-top: 10px;
 }
 
-.step-container > h2:first-child {
+.step-container h2:first-child {
 	float:left;
 }
 
@@ -347,8 +348,31 @@ h3 {
 	font-size: 24px;
 }
 
+.complete, a.complete: {
+	color: #fff;
+}
+
 .incomplete {
 	color: #7d7d7d;
 }
+
+/*ACCORDION FUNCTIONS*/
+
+
+.accordion {
+    box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+    border-radius:3px;
+}
+
+.accordion-section-title {
+	width:100%;
+	display: inline-block;
+	transition: all linear 0.15s;
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+	background:#028494;
+}
+
 
 /*----END CHECKLIST PAGE----*/

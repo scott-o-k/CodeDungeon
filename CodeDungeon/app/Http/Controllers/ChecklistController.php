@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use DB;
+use App\User;
 use App\Models\Step;
 use App\Models\Application;
 use Request;
@@ -33,10 +34,7 @@ class ChecklistController extends Controller {
 	 *
 	 * @return Response
 	 */
-	// public function listSteps() {
-	// 	$steps = Step::all();
-	// 	return view('main_checklist')
-	// }
+
 
 	public function getApp() {
 
