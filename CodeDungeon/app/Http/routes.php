@@ -19,3 +19,14 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('/main_checklist','ChecklistController@listSteps');
+
+Route::get('/applyNow', 'ChecklistController@getApp');
+
+Route::post('/api/application_google/{application_id}', 'ChecklistController@updateEmailAction');
+
+Route::post('/api/application_github/{application_id}', 'ChecklistController@updateGitHubAction');
+
+Route::post('/api/application_twitter/{application_id}', 'ChecklistController@updateTwitterAction');
+

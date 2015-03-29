@@ -1,0 +1,51 @@
+DROP DATABASE IF EXISTS CodeDungeon;
+CREATE DATABASE CodeDungeon;
+USE CodeDungeon;
+CREATE TABLE user (
+	user_id INT AUTO_INCREMENT PRIMARY KEY,
+	admin BOOLEAN DEFAULT 0,
+	first_name VARCHAR(255) NOT NULL,
+	last_name VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	phone INT NOT NULL,
+	class VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	google_username VARCHAR(255),
+	github_username VARCHAR(255),
+	twitter_username VARCHAR(255),
+	remember_token varchar(255),
+	created_at datetime,
+	updated_at datetime
+);
+CREATE TABLE file_upload (
+	file_upload_id INT AUTO_INCREMENT PRIMARY KEY,
+	application_id INT NOT NULL,
+	step_id INT NOT NULL,
+	file_name VARCHAR(255) NOT NULL,
+);
+CREATE TABLE step (
+	step_id INT AUTO_INCREMENT PRIMARY KEY,
+	title VARCHAR(255) NOT NULL,
+	description BLOB DEFAULT NULL,
+	objectives BLOB DEFAULT NULL,
+	resources BLOB DEFAULT NULL,
+	project BLOB DEFAULT NULL,
+	upload_text TEXT DEFAULT NULL,
+	upload_name VARCHAR(255) DEFAULT NULL
+);
+CREATE TABLE class (
+	class_id INT AUTO_INCREMENT PRIMARY KEY,
+	start_date datetime,
+	description VARCHAR(255) DEFAULT NULL
+);
+CREATE TABLE application (
+	application_id INT AUTO_INCREMENT PRIMARY KEY,
+	user_id INT DEFAULT NULL,
+	class_id INT DEFAULT NULL
+);
+CREATE TABLE progress_step (
+	application_id INT NOT NULL,
+	step_id INT NOT NULL,
+	PRIMARY KEY (application_id, step_id),
+	completed BOOLEAN DEFAULT 0
+);

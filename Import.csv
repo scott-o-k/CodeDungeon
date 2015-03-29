@@ -1,0 +1,15 @@
+step_id,title,description,objectives,resources,project,upload_text,upload_name
+2,Sublime Text Editor,"<div>When you come to class on the first day, we will need you to have a code editor installed on your ocmputer. Sublime Text editor is very popular in the web development community.</div>
+<div><strong>Download it here:</strong> <a href=”http://sublimetext.com/3”>Sublime Text</a></div>","<div>
+<ul>In this milestone, we hope you achieve the following objectives:
+</ul><li>Install Sublime Text Editor</li>
+<li>Explain how settings are managed in Sublime.</li>
+</div>","<div><strong>Review the following materials</strong></div><div>Below is a list of videos that will help you get familiar with Sublime and to learn the above objectives. We know that you won't understand every part of these two videos. That's okay, watch them anyway just to get started: 
+
+<li><a href=” “>Welcome</a></li>
+<li><a href=” “>Installation and Base Settings</a></li>
+</div>",,,
+3,HTML Basic Concepts,,,,,,
+4,CSS Basic Selectors,,,,,,
+5,Unix Basics,,,,,,
+6,Learning Git and GitHub,,,,,,

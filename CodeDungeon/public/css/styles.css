@@ -1,0 +1,354 @@
+/*----------------------------------------------------------*/
+/*----------------------------TOP OF THE PAGE----------------*/
+/*----------------------------------------------------------*/
+
+/*Import*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import url('http://fonts.googleapis.com/css?family=Indie+Flower');
+
+/*----LAYOUT----*/
+
+body {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	background: url(images/CodeDungeonBackGround.jpg);
+	margin: 0;
+	line-height: 1.6;
+	color: white;
+}
+
+/*----LAYOUT > HEADER----*/
+
+header {
+	line-height:100px;
+	position: relative;
+}
+
+header:first-child {
+	min-height: 100px;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.header-logo {
+	vertical-align: middle;
+	min-height: 95px;
+	min-width: 350px;
+	position: relative;
+	background: url(images/code-dungeon-logo-header.png) 0px 0px no-repeat;
+	float: left;
+}
+
+.top-links {
+	float: right;
+	background: rgba(0,0,0,0.5);
+}
+
+.login-link {
+	text-decoration: none;
+	color: #ed5338;
+	font-weight: 600;
+	padding-right: 20px;
+}
+
+.apply-now-button {
+	line-height: 2em;
+	font-size: 16pt;
+	background-color: #ed5338;
+	text-decoration:none;
+	font-weight: 600;
+	color: white;
+	padding: 5px 16px 2px 16px;
+}
+
+.apply-now-button:hover {
+	background-color: orange;
+}
+
+nav {
+	text-align: center;
+	background-color: #1c2b39;
+}
+
+nav > div {
+	line-height: 48pt;
+}
+
+
+nav a {
+	font-size: 16pt;
+	font-weight: 600;
+	color: white;
+	padding: 17px 2.5em;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav a:hover{
+	background-color: #428bca;
+	color: #005b7f;
+	transition: all 0.4s ease;
+}
+
+main /*Default background for most pages*/ {
+	background-color: #005b7f;
+}
+
+
+/*----LAYOUT > FOOTER----*/
+
+footer {
+	min-height: 100px;
+}
+
+footer .container {
+	text-align: center;
+		background-color: rgba(0,0,0,0.5);
+}
+
+.tagline {
+	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	letter-spacing: 5px;
+	color: white;
+}
+
+.copyright {
+	color:#999;
+}
+
+
+/*----END LAYOUT----*/
+
+
+/*----MOST PAGES----*/
+
+body {
+
+}
+
+h2 {
+	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	color: white;
+	font-weight: normal;
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	background-color: green;
+	margin: 0;
+	text-align: center;
+}
+
+.section-top-image {
+	background-color: yellow;
+	margin:0 auto;
+	min-height: 97px;
+	width: 88px;
+}
+
+.panel-heading {
+	background-color: pink;
+	padding-top: 30px;
+}
+
+.form-horizontal {
+	display:block;
+	margin-top:0em;
+	padding: 60px 0px;
+}
+
+.form-group {
+	position:relative;
+}
+
+label.control-label {
+	text-transform:uppercase;
+	position:absolute;
+	left: 0;
+	top:0;
+	transition: all .2s linear;
+	color: #999;
+	font-size: 16px;
+}
+
+input {
+	transition: all .2s linear;
+	color: #7d7d7d;
+}
+
+input:focus + label.control-label {
+	bottom:100%;
+	margin-top: -1.5em;
+	color: white;
+	font-style: bold;
+	font-size: 18px;
+	text-shadow: 4px 0 5px rgba(0, 159, 179, 1);
+}
+
+input:focus {
+	box-shadow: 1px 1px 5px 5px rgba(0, 159, 179, 1);
+}
+
+input:invalid + label.control-label {
+	top: 3px;
+	opacity: 0;
+}
+
+input:valid + label.control-label {
+	opacity:1;
+	top:0;
+}
+
+
+.form-control /*standard input field*/{
+	display:inline-block;
+	background-color: #fff;
+	padding: 6px 12px;
+	border: 1px solid #BBB9B9;
+	color: #797979;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 25px;
+	font-family: 'Raleway', Arial, sans-serif;
+	width: 90%;
+}
+
+button {
+	border: 3px solid #009fb3;
+	background: none;
+	color: #009fb3;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	transition: background .5s ease;
+	-moz-transition: background .5s ease;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+}
+
+button.add-button{
+	padding: 7px 12px 7px 12px;
+}
+
+button:hover {
+	background-color: #009fb3;
+	color: white;
+}
+
+
+/*----END MOST PAGES----*/
+
+
+/*----HOME PAGE----*/
+
+.intro-splash {
+	min-height: 450px;
+	background: url(images/learn-to-code-in-12-days-wide.jpg);
+	background-color: #005b7f;
+	overflow: hidden;
+}
+
+.text-overlay {
+	margin-top: 2.25em;
+	text-align: center;
+	font-family: 'Raleway', Arial, helvetica, sans-serif;
+	font-size: 4.5em;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.text-overlay:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+
+/*----END HOME PAGE----*/
+
+
+
+/*----REGISTER---*/
+
+.form-horizontal {
+	position:relative;
+}
+
+
+div.form-group {
+	display:inline-block;
+	width: 48%;
+}
+
+div.form-group:nth-of-type(even), div button {
+	float:top,right;
+}
+
+/*----END REGISTER----*/
+
+
+/*----CHECKLIST PAGE----*/
+
+h3 {
+	font-size: 1.5em;
+	font-weight: normal;
+	margin: 0;
+
+}
+
+.step-container{
+	border-top: 1px solid #009fb3;
+	border-bottom: 1px solid #009fb3;
+	padding: 30px 0;
+}
+
+.step-container:nth-of-type(even) {
+	background-color: #1c2b39;
+}
+
+.step-container:nth-of-type(1) {
+	padding-top: 10px;
+}
+
+.step-container > h2:first-child {
+	float:left;
+}
+
+.step-container li {
+	text-indent: 5%;
+	padding: 4px 0;
+}
+
+.step-container a {
+	font-size: 18px;
+	font-weight: bold;
+	color:#009fb3;
+	text-decoration: none;
+}
+
+.step-container label {
+	color: #7d7d7d;
+}
+
+.step-container button {
+	height: 30px;
+
+}
+
+.incomplete, .complete {
+	float:right;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+.incomplete {
+	color: #7d7d7d;
+}
+
+/*----END CHECKLIST PAGE----*/
