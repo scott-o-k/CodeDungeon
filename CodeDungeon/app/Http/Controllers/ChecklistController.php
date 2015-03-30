@@ -49,7 +49,7 @@ class ChecklistController extends Controller {
 			$application->class_id = $user->class;
 			$application_id = $application->save();
 
-			return view('main_checklist', ['application'=>$application]);
+			return redirect()->route('applyNow');
 			// dd($application);
 		}
 	}
@@ -79,5 +79,64 @@ class ChecklistController extends Controller {
 		$application->save();
 		return Request::input('twitter_username');
 	}
+
+	// ----------Marking 'Complete' For Each Step ---------- //
+
+	public function completeStep0() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_0 = Request::input('complete_step_0');
+		$application->save();
+		return Request::input('complete_step_0');
+	}
+
+	public function completeStep1() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_1 = Request::input('complete_step_1');
+		$application->save();
+		return Request::input('complete_step_1');
+	}
+
+	public function completeStep2() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_2 = Request::input('complete_step_2');
+		$application->save();
+		return Request::input('complete_step_2');
+	}
+
+	public function completeStep3() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_3 = Request::input('complete_step_3');
+		$application->save();
+		return Request::input('complete_step_3');
+	}
+
+	public function completeStep4() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_4 = Request::input('complete_step_4');
+		$application->save();
+		return Request::input('complete_step_4');
+	}
+
+	public function completeStep5() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_5 = Request::input('complete_step_5');
+		$application->save();
+		return Request::input('complete_step_5');
+	}
+
+	public function completeStep6() {
+		$user = Request::user();
+		$application = $user->getApplication();
+		$application->complete_step_6 = Request::input('complete_step_6');
+		$application->save();
+		return Request::input('complete_step_6');
+	}
+
 
 }

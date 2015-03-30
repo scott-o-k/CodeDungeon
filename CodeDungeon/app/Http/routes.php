@@ -18,15 +18,41 @@ Route::get('home', 'HomeController@index');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+
 ]);
+
+// Admin ------------------------------------------------
+
+
+
+
+
+
+// Pre-Work ----------------------------------------------
 
 Route::get('/main_checklist','ChecklistController@listSteps');
 
-Route::get('/applyNow', 'ChecklistController@getApp');
+Route::get('/applyNow', ['as' => 'applyNow', 'uses' => 'ChecklistController@getApp']);
 
 Route::post('/api/application_google/{application_id}', 'ChecklistController@updateEmailAction');
 
 Route::post('/api/application_github/{application_id}', 'ChecklistController@updateGitHubAction');
 
 Route::post('/api/application_twitter/{application_id}', 'ChecklistController@updateTwitterAction');
+
+Route::post('/api/application_step0/{application_id}', 'ChecklistController@completeStep0');
+
+Route::post('/api/application_step1/{application_id}', 'ChecklistController@completeStep1');
+
+Route::post('/api/application_step2/{application_id}', 'ChecklistController@completeStep2');
+
+Route::post('/api/application_step3/{application_id}', 'ChecklistController@completeStep3');
+
+Route::post('/api/application_step4/{application_id}', 'ChecklistController@completeStep4');
+
+Route::post('/api/application_step5/{application_id}', 'ChecklistController@completeStep5');
+
+Route::post('/api/application_step6/{application_id}', 'ChecklistController@completeStep6');
+
+
 

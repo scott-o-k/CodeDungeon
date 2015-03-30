@@ -89,6 +89,212 @@ $(document).ready(function() {
 	})();
 
 	//================================================================
+	// Complete Step 0
+	//================================================================
+
+	(function() {
+
+		$('#step0 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+	//================================================================
+	// Complete Step 1
+	//================================================================
+
+	(function() {
+
+		$('#step1 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+
+	//================================================================
+	// Complete Step 2
+	//================================================================
+
+	(function() {
+
+		$('#step2 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+
+	//================================================================
+	// Complete Step 3
+	//================================================================
+
+	(function() {
+
+		$('#step3 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+	//================================================================
+	// Complete Step 4
+	//================================================================
+
+	(function() {
+
+		$('#step4 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+	//================================================================
+	// Complete Step 5
+	//================================================================
+
+	(function() {
+
+		$('#step5 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+	//================================================================
+	// Complete Step 6
+	//================================================================
+
+	(function() {
+
+		$('#step6 button').on('click', function(e) {
+			e.preventDefault();
+			var button = $(this);
+			var form = button.parent();
+			var url = form.prop('action');
+
+			$.ajax ({
+				type: 'POST',
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					console.log(data);
+				},
+				error: function(data) {
+					console.log(data.responseJSON);
+				}
+
+			});
+
+		});
+
+	})();
+
+
+	//================================================================
 	// Accordion (Checklist Page)
 	//================================================================
 
@@ -111,7 +317,7 @@ $(document).ready(function() {
 			$('.accordion ' + getAnchorValue).slideDown(300).addClass('open'); 
 		}
 
-		e.preventDefault();
-	});
+			e.preventDefault();
+		});
 
 });

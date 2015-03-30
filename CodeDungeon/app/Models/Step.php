@@ -12,8 +12,4 @@ class Step extends Model {
 
 
 
-// Update Outside Account Usernames
 
-	// public static function account_usernames(
-		
-	// )

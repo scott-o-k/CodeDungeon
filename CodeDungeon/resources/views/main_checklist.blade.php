@@ -28,8 +28,8 @@
 					<form class="accounts-form" method="POST" action="/api/application_google/{application_id}" id="google"> 
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<a href="http://plus.google.com/">Google Plus</a>:
-						<label>Username</label>
-						<input name="google_username" value="{{ $application->google_username }}">
+						<label>Email </label>
+						<input type="email" name="google_username" value="{{ $application->google_username }}">
 						<button type="submit" class="btn btn-primary" name="google">Add</button>
 					</form>
 				</li>
@@ -38,7 +38,7 @@
 					<form class="accounts-form" method="POST" action="/api/application_github/{application_id}" id="github">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<a href="http://github.com/">GitHub</a>:
-						<label>Username</label>
+						<label>Username </label>
 						<input action="" name="github_username" value="{{ $application->github_username }}">
 						<button type="submit" class="btn btn-primary" name="github">Add</button>
 					</form>
@@ -48,15 +48,24 @@
 					<form class="accounts-form" method="POST" action="/api/application_twitter/{application_id}" id="twitter">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<a href="http://twitter.com/">Twitter</a>:
-						<label>Username</label>
+						<label>Username </label>
 						<input name="twitter_username" value="{{ $application->twitter_username}}">
 						<button type="submit" class="btn btn-primary" name="twitter">Add</button>
 					</form>
 				</li>
-			
-			<div class="incomplete">Incomplete</div>
-			<div class="complete">Complete</div>
 
+			{{-- Complete Step Button --}}
+				
+				<form class="step-complete" method="POST" action="/api/application_step0/{application_id}" id="step0">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_0" value="1">
+					<button type="submit" name="complete_step_0" value=TRUE>Complete Step 0</button>
+				</form>
+					
+
+{{-- 			<div class="incomplete">Incomplete</div>
+			<div class="complete">Complete</div>
+ --}}
 	</div>
 
 	<div class="accordion">
@@ -70,8 +79,18 @@
 				<div class="complete">Complete</div>
 			</a>
 
-			<div id="step-1-content" class="accordion-section-content active">
-				Our industry is full of new terms for you to learn. Start off by reading the Programming Terminology and Conversations document to get started (In the pre­work folder) 
+			<div id="step-1-content" class="accordion-section-content">
+				<div>Our industry is full of new terms for you to learn. Start off by reading the Programming Terminology
+				and Conversations document to get started (In the pre­work folder)</div>
+
+				{{-- Complete Step Button --}}
+	
+				<form class="step-complete" method="POST" action="/api/application_step1/{application_id}" id="step1">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_1" value="1">
+					<button type="submit" name="complete_step_1" value=TRUE>Complete Step 1</button>
+				</form>
+
 			</div>
 		</div>
 		
@@ -107,6 +126,15 @@
 					Welcome</a></li>
 					<li><a href="http://www.google.com/url?q=http%3A%2F%2Fcode.tutsplus.com%2Fcourses%2Fperfect-workflow-in-sublime-text-2%2Flessons%2Finstallation-and-base-settings&sa=D&sntz=1&usg=AFQjCNFpbo27lG0ZQJdA0VyVVZOPi9Jc_A">
 					Installation and Base Settings</a></li>
+
+				{{-- Complete Step Button --}}
+
+				<form class="step-complete" method="POST" action="/api/application_step1/{application_id}" id="step2">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_2" value="1">
+					<button type="submit" name="complete_step_2" value=TRUE>Complete Step 2</button>
+				</form>
+
 			</div> 
 				{{-- end Accordion Section/ Step 2 Content --}}
 		</div>
@@ -183,6 +211,16 @@
 					<div>Name, favorite foods, where you grew up, hobbies, and a picture of yourself. For this small 
 					project, do not do any CSS.</div>
 					<div>Once you are complete, email myprofile.html to <a href="mailto:rockit@apollo.edu">rockit@apollo.edu</a>.</div>
+
+				{{-- Complete Step Button --}}
+
+				<form class="step-complete" method="POST" action="/api/application_step3/{application_id}" id="step3">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_3" value="1">
+					<button type="submit" name="complete_step_3" value=TRUE>Complete Step 3</button>
+				</form>
+
+
 			</div>
 			{{-- end Accordion Section / Step 3 Content --}}
 		</div>
@@ -237,6 +275,16 @@
 					 
 					Once you are complete, email the styled myprofile.html to <a href="mailto:rockit@apollo.edu">rockit@apollo.edu</a>.
 				</div>
+
+				{{-- Complete Step Button --}}
+
+				<form class="step-complete" method="POST" action="/api/application_step1/{application_id}" id="step4">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_4" value="1">
+					<button type="submit" name="complete_step_4" value=TRUE>Complete Step 4</button>
+				</form>
+
+
 			</div>	
 			{{-- end Accordion Section / Step 4 Content --}}
 		</div>
@@ -285,8 +333,18 @@
 						<li>Run the command man ls</li>
 						<li>Run the command info ls </li>
 					</ul>
+
+			{{-- Complete Step Button --}}
+
+				<form class="step-complete" method="POST" action="/api/application_step5/{application_id}" id="step5">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_5" value="1">
+					<button type="submit" name="complete_step_5" value=TRUE>Complete Step 5</button>
+				</form>
+
+
 			</div>
-			{{-- end Accordion Section / Step 4=5 Content --}}
+			{{-- end Accordion Section / Step 5 Content --}}
 		</div>
 		{{-- end Accordion Section / Step 5 --}}
 
@@ -342,6 +400,14 @@
 				 <li>Create an account at GitHub <a href="https://github.com/">https://github.com/</a>  </li>
 					<li>Create a repsository <a href="https://help.github.com/articles/create­a­repo">https://help.github.com/articles/createarepo</a></li>
 					<li>Create a ReadMe file in your repository. Include a link to <a href="http://rockitbootcamp.com/">http://rockitbootcamp.com</a></li>
+
+			{{-- Complete Step Button --}}
+				<form class="step-complete" method="POST" action="/api/application_step6/{application_id}" id="step6">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					<input type="hidden" name="complete_step_6" value="1">
+					<button type="submit" name="complete_step_6" value=TRUE>Complete Step 6</button>
+				</form>
+
 			</div>
 		</div>
 	</div>
