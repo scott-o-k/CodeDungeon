@@ -42,7 +42,8 @@ class ChecklistController extends Controller {
 		$application = $user->getApplication();
 
 		if ($application) {
-			return view ('main_checklist', ['application'=>$application]);
+			return view ('main_checklist', ['application'=>$application,
+											'application_id'=>$application->getId()]);
 		} else {
 			$application = new Application();
 			$application->user_id = $user->user_id;
@@ -56,12 +57,23 @@ class ChecklistController extends Controller {
 
 	// ----------Adding outside accounts for Step 0 ---------- //
 
-	public function updateEmailAction() {
+	public function updateEmailAction($application_id) {
 		$user = Request::user();
 		$application = $user->getApplication();
-		$application->google_username = Request::input('google_username');
+		if (!empty(Request::input('google_username'))){
+			$application->google_username = Request::input('google_username');	
+		} 
+			
+		if (!empty(Request::input('github_username'))){
+			$application->github_username = Request::input('github_username');	
+		}
+
+		if (!empty(Request::input('twitter_username'))){
+			$application->twitter_username = Request::input('twitter_username');	
+		}
+
 		$application->save();
-		return Request::input('google_username');
+		return $application;
 	}
 
 	public function updateGitHubAction() {

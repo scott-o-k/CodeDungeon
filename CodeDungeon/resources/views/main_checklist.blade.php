@@ -15,7 +15,7 @@
 			Don't worry if you don't immediately understand the terms and concepts; we've included 
 			materials in each milestone to help you learn.
 		</div>
-
+val
 	</div>
 
 	<div class="step-container">
@@ -25,32 +25,32 @@
 			
 			<div>Please make an account at these websites if you don’t have one already:</div>
 				<li>
-					<form class="accounts-form" method="POST" action="/api/application_google/{application_id}" id="google"> 
+					<form class="accounts-form" method="POST" action="/api/application/{{$application_id}}"> 
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<a href="http://plus.google.com/">Google Plus</a>:
 						<label>Email </label>
 						<input type="email" name="google_username" value="{{ $application->google_username }}">
-						<button type="submit" class="btn btn-primary" name="google">Add</button>
+						<button type="submit" class="btn btn-primary accounts" name="google">Add</button>
 					</form>
 				</li>
 
 				<li>
-					<form class="accounts-form" method="POST" action="/api/application_github/{application_id}" id="github">
+					<form class="accounts-form" method="POST" action="/api/application/{{$application_id}}"> 
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<a href="http://github.com/">GitHub</a>:
 						<label>Username </label>
 						<input action="" name="github_username" value="{{ $application->github_username }}">
-						<button type="submit" class="btn btn-primary" name="github">Add</button>
+						<button type="submit" class="btn btn-primary accounts" name="github">Add</button>
 					</form>
 				</li>
 
 				<li>
-					<form class="accounts-form" method="POST" action="/api/application_twitter/{application_id}" id="twitter">
+					<form class="accounts-form" method="POST" action="/api/application/{{$application_id}}"> 
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<a href="http://twitter.com/">Twitter</a>:
 						<label>Username </label>
 						<input name="twitter_username" value="{{ $application->twitter_username}}">
-						<button type="submit" class="btn btn-primary" name="twitter">Add</button>
+						<button type="submit" class="btn btn-primary accounts" name="twitter">Add</button>
 					</form>
 				</li>
 
@@ -63,9 +63,9 @@
 				</form>
 					
 
-{{-- 			<div class="incomplete">Incomplete</div>
+			{{-- 			<div class="incomplete">Incomplete</div>
 			<div class="complete">Complete</div>
- --}}
+ 			--}}
 	</div>
 
 	<div class="accordion">

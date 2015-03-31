@@ -2,91 +2,64 @@ $(document).ready(function() {
 
 
 	//================================================================
-	// Google Username
+	// Step 0 Send Outside Account Info (& validate Google)
 	//================================================================
 
 	(function() {
 
-		$('#google button').on('click', function(e) {
+
+		function isInvalidEmail(input) {
+		// invalid if the email doesn't have an '@' sig
+
+			console.log(this['input.name']);
+
+			var emailRegex = /@/g;
+
+			if (!emailRegex.test(input)) {
+				alert("Hey, you forgot the @ sign!");
+			} else {
+				return true;
+			};
+
+		}
+
+		$('.accounts').on('click', function(e) {
 			e.preventDefault();
-			var button = $(this);
-			var form = button.parent();
-			var url = form.prop('action');
 
-			$.ajax ({
-				type: 'POST',
-				url: url,
-				data: form.serialize(),
-				success: function(data) {
-					console.log(data);
-				},
-				error: function(data) {
-					console.log(data.responseJSON);
-				}
+			//Was google clicked? 
+			console.log(this.name);
+			
+			
+			if ((this.name) == 'google') {
+				isInvalidEmail(this['input.name']);
+							
 
-			});
+				// var button = $(this);
+				// var form = button.parent();
+				// var url = form.prop('action');
+
+				// $.ajax ({
+				// 	type: 'POST',
+				// 	url: url,
+				// 	data: form.serialize(),
+				// 	success: function(data) {
+				// 		console.log(data);
+				// 	},
+				// 	error: function(data) {
+				// 		console.log(data.responseJSON);
+				// 	}
+
+				// });
+				
+			} else {
+				return false;
+			}
+
 
 		});
 
 	})();
 
-	//================================================================
-	// GitHub Username
-	//================================================================
-
-	(function() {
-
-		$('#github button').on('click', function(e) {
-			e.preventDefault();
-			var button = $(this);
-			var form = button.parent();
-			var url = form.prop('action');
-
-			$.ajax ({
-				type: 'POST',
-				url: url,
-				data: form.serialize(),
-				success: function(data) {
-					console.log(data);
-				},
-				error: function(data) {
-					console.log(data.responseJSON);
-				}
-
-			});
-
-		});
-
-	})();
-
-	//================================================================
-	// Twitter Username
-	//================================================================
-
-	(function() {
-
-		$('#twitter button').on('click', function(e) {
-			e.preventDefault();
-			var button = $(this);
-			var form = button.parent();
-			var url = form.prop('action');
-
-			$.ajax ({
-				type: 'POST',
-				url: url,
-				data: form.serialize(),
-				success: function(data) {
-					console.log(data);
-				},
-				error: function(data) {
-					console.log(data.responseJSON);
-				}
-
-			});
-
-		});
-
-	})();
 
 	//================================================================
 	// Complete Step 0

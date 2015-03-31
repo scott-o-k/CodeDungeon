@@ -24,7 +24,7 @@ Route::controllers([
 // Admin ------------------------------------------------
 
 
-
+Route::get('/admin', 'AdminController@getAllStudents');
 
 
 
@@ -34,11 +34,8 @@ Route::get('/main_checklist','ChecklistController@listSteps');
 
 Route::get('/applyNow', ['as' => 'applyNow', 'uses' => 'ChecklistController@getApp']);
 
-Route::post('/api/application_google/{application_id}', 'ChecklistController@updateEmailAction');
+Route::post('/api/application/{application_id}', 'ChecklistController@updateEmailAction');
 
-Route::post('/api/application_github/{application_id}', 'ChecklistController@updateGitHubAction');
-
-Route::post('/api/application_twitter/{application_id}', 'ChecklistController@updateTwitterAction');
 
 Route::post('/api/application_step0/{application_id}', 'ChecklistController@completeStep0');
 
